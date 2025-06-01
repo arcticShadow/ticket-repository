@@ -1,0 +1,15 @@
+meta {
+  name: Cancel Ticket Purchase
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/events/tickets/{{allocationId}}/payment
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  allocationId: 82aec8fb-9cca-49c6-b69a-8a83d065130d
+}

@@ -1,0 +1,34 @@
+auth {
+  mode: none
+}
+
+vars:pre-request {
+  baseUrl: http://localhost:3000
+}
+
+
+meta {
+  name: Flicket API
+  type: collection
+  version: 1.0.0
+}
+
+docs {
+    # Flicket API Documentation
+
+    This collection contains API requests for the Flicket ticketing system.
+
+    ## Available Endpoints
+
+    - **Events** - Create, list and retrieve events
+    - **Tickets** - Reserve and purchase tickets for events
+
+    ## Authentication
+
+    No authentication is required for the current API version.
+
+    ## Environment Setup
+
+    The API base URL is configured as a collection variable `baseUrl`.
+    Default value is `http://localhost:3000`.
+} 

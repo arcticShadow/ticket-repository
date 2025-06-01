@@ -1,0 +1,19 @@
+meta {
+  name: Get Event
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/events/{{eventId}}
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+vars:pre-request {
+  eventId: cc2fe01c-a0b4-40ff-a69b-1fa3c7658031
+}

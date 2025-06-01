@@ -1,0 +1,6 @@
+[tools]
+adr-tools = "latest"
+bats = "latest"
+"npm:prettier" = "latest"
+shfmt = "latest"
+skaffold = "latest"

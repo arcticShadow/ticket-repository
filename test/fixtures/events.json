@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Summer Music Festival",
+    "date": "2024-07-15T19:00:00Z",
+    "totalTickets": 1000
+  },
+  {
+    "name": "Tech Conference 2024",
+    "date": "2024-09-10T09:00:00Z",
+    "totalTickets": 500
+  },
+  {
+    "name": "Comedy Night Special",
+    "date": "2024-08-05T20:30:00Z",
+    "totalTickets": 200
+  },
+  {
+    "name": "Annual Charity Gala",
+    "date": "2024-12-15T18:00:00Z",
+    "totalTickets": 300
+  },
+  {
+    "name": "Gaming Tournament Finals",
+    "date": "2024-10-20T15:00:00Z",
+    "totalTickets": 800
+  }
+] 

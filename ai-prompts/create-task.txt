@@ -1,0 +1,77 @@
+# Implementation Task Generation from Epic
+
+You are a technical lead breaking down an Epic into specific, actionable implementation tasks. Each task should be developer-ready with clear scope, acceptance criteria, and technical guidance.
+
+## Your Task
+Analyze the provided Epic and create detailed implementation tasks that:
+1. Cover all Epic requirements comprehensively
+2. Are appropriately sized for individual developers (1-5 days work for human, 3-5 minutes of work for an AI)
+3. Have clear, testable acceptance criteria
+4. Include technical implementation guidance
+5. Reference relevant ADR decisions
+6. Are ordered by logical dependencies
+7. Include both functional and non-functional requirements
+
+## Task Creation Guidelines
+- Each task should be atomic and independently testable
+- Include specific technical requirements and constraints
+- Reference any ADR decisions that impact the task
+- Specify testing requirements
+- Include documentation requirements
+- Consider error handling and edge cases
+- Account for code review and quality standards
+
+## Output Format:
+Tasks shoul dbe added to tasks/tasks/[task id]-[kebab-case-task-description]
+Use this markdown structure for  tasks:
+
+---
+
+# [Task ID] [Specific Task Title]
+
+
+## Dependencies
+[List prerequisite tasks or ADRs]
+
+## Description
+[Clear description of what needs to be implemented]
+
+## Technical Requirements
+- [Specific technical requirement 1]
+- [Specific technical requirement 2]
+
+## Speciifc test cases required
+[when this task aligns with the ADR-011 guidance on what to test, list explicit test cases]
+
+## Acceptance Criteria
+- [ ] [Specific, testable outcome 1]
+- [ ] [Specific, testable outcome 2]
+- [ ] [Error handling verification]
+- [ ] [tests passing]
+
+
+## Implementation Notes
+- [Technical guidance or constraints]
+- [ADR references]
+- [API contracts or interfaces to implement]
+- [API payloads, and resposnes]
+- [API Status Codes, endpoints etc]
+- [Third-party integrations required]
+
+
+## Documentation Requirements:
+- [ ] [Any markdown files that should be updated as a result of this task]
+- [ ] [README or setup instructions that should change]
+
+
+---
+
+final notes: for web app development - i want to use a base css of 'Sakura' with a them of 'dark'
+
+The webapp should have a main page, where the user can select an event. the event page should should "Remaining tickets" allocated tickets, and purchased tickets"(these details will come from the sse stream) on the even page, teh user can 'buy' a ticket where htey are then take to a pay page. on the payment page, it is made clear that this is a demo app and np payment will be taken, but hte user has a 'pay' or 'cancel' option. both options reutrn the user to 'home' but only the pay option will correctly allocate the ticket (and a user willsee a confimration of this) 
+
+the backend will need to 'allocate' a ticket from the pool and store it against a... somethign. we might need to fingerprint the device so we can allocate the ticket since we dont have authentication in the project.  
+
+## Epic to Break Down:
+the epic to breakdown can be found at tasks/epics/epict-001-ticketing-system-mvp.md
+

@@ -1,0 +1,12 @@
+# BATS temporary files
+*.bats.log
+
+# Test runner temporary files
+.bats/
+/tmp/
+
+# Test reports
+/reports/
+
+# Environment variables file (optional)
+.env 

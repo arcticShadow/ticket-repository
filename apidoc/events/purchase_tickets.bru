@@ -1,0 +1,22 @@
+meta {
+  name: Purchase Tickets
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/events/{{eventId}}/tickets
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "quantity": 2,
+  "userFingerprint": "abc123xyz"
+  }
+}
+
+vars:pre-request {
+  eventId: cc2fe01c-a0b4-40ff-a69b-1fa3c7658031
+}

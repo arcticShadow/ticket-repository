@@ -1,0 +1,32 @@
+apiVersion: skaffold/v4beta13
+kind: Config
+metadata:
+  name: flicket
+build:
+  artifacts:
+    - image: api-image
+      context: components/api
+      docker:
+        dockerfile: Dockerfile
+        
+    - image: webapp-image
+      context: components/web-app
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - k8s/postgres.yaml
+    - k8s/api.yaml
+    - k8s/web-app.yaml
+deploy:
+  kubectl: {}
+portForward:
+  - resourceType: service
+    resourceName: api
+    port: 3000
+  - resourceType: service
+    resourceName: web-app
+    port: 4173
+  - resourceType: service
+    resourceName: postgres
+    port: 5432

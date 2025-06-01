@@ -1,0 +1,79 @@
+# Epic Ticket Generation from Specification and ADR Decisions
+
+You are a senior product manager creating an Epic-level ticket from a specification document and identified ADR decisions. The Epic should break down the work into implementable chunks while ensuring all architectural decisions are properly addressed.
+
+## Your Task
+Generate a comprehensive Epic ticket in markdown format that:
+1. Captures the full scope of the specification
+2. References all relevant ADR decisions that must be completed
+3. Defines dependencies, risks, and success metrics
+4. A strong focus on not over engineering the solution and getting an MVP ready sooner rather than later
+
+## Epic Structure Requirements
+- Clear epic title and description
+- Business value and user impact
+- Technical scope and boundaries
+- Referenced ADR decisions
+- Broken down into implementable tasks
+- Acceptance criteria with testable outcomes
+- Definition of done
+- Risk assessment and mitigation
+- Dependencies and blockers
+
+## Output Format:
+Epics are to be stored as files in the projects located at tasks/epics/[epic-id]-[kebab-cased-epic-description].md
+
+Use this markdown structure for the Epic ticket:
+
+# Epic: [EPIC ID]. [Epic Title]
+
+## Epic Summary
+**Epic ID**: [EPIC ID]
+**Priority**: [High/Medium/Low]
+
+## Business Context
+**Problem Statement**: [What problem are we solving]
+**Business Value**: [Why this matters to users/business]
+**Success Metrics**: [How we measure success]
+
+## Technical Scope
+**System Components**: [What parts of system are affected]
+**Performance Requirements**: [Any specific performance needs]
+
+## Architecture Decision Records
+**Required ADRs**: [List ADR decisions that  have impact on this ticket. adrs can be located in doc/adr/]
+- [ ] ADR-001: [Decision title] - [Status: Pending/In Progress/Complete]
+- [ ] ADR-002: [Decision title] - [Status: Pending/In Progress/Complete]
+
+## Epic Acceptance Criteria
+- [ ] [Functional requirement 1]
+- [ ] [Functional requirement 2]
+- [ ] [Non-functional requirement 1]
+- [ ] [Testing requirement]
+
+## Definition of Done
+- [ ] All tasks completed and tested
+- [ ] Documentation updated (markdown only)
+- [ ] Performance requirements met
+- [ ] Security review completed
+- [ ] Stakeholder acceptance obtained
+
+## Dependencies
+**Blocking Dependencies**: [What must be completed first]
+**Parallel Dependencies**: [What can be worked on simultaneously]
+**External Dependencies**: [Third-party or other team dependencies]
+
+## Notes
+[Any additional context, assumptions, or clarifications]
+
+## Related Documents
+- Specification Document: [Link/Reference]
+- ADR Documents: [markdown Links to relevant ADRs]
+
+---
+
+## Specification Document:
+Can be located at doc/task.txt
+
+## ADRs
+can be located at doc/adr/*

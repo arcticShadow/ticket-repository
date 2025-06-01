@@ -1,0 +1,21 @@
+meta {
+  name: Confirm Ticket Purchase
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/events/tickets/{{allocationId}}/payment
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userFingerprint":"asdasd"
+  }
+}
+
+vars:pre-request {
+  allocationId: d5d451df-69fd-47ef-92dc-a42754963114
+}

@@ -1,0 +1,47 @@
+Flicket Technical Assessment
+
+Objective
+Build a simple full-stack application where users can create events and purchase tickets.
+
+The goal is to evaluate your engineering decisions and ability to handle concurrency-
+not to build a production-ready ticketing system.
+
+Requirements
+Tech Stack
+● Backend: Node.js with TypeScript (NestJS recommended but not required, RESTful
+is also fine over GraphQL)
+● Frontend: React with TypeScript (Next.js recommended but not required)
+● Database: Any relational database (PostgreSQL preferred, but SQLite or MySQL are
+fine)
+Features
+1. Event Management
+○ Users can create an event (name, date, and total tickets available).
+○ Users can view a list of events.
+○ Users can view a single event.
+2. Ticket Purchasing (Concurrency Handling Required)
+○ Users can "buy" tickets for an event (no payment required).
+○ The system must prevent overselling when multiple users buy tickets
+concurrently.
+○ You can handle concurrency at the database level (transactions, row-level
+locking) or application level (queueing, optimistic locking, etc.).
+
+Trade-offs & Assumptions
+● No need for authentication - keep it simple.
+● No need for a polished UI - use an off the shelf component library you are
+comfortable with.
+● No complex error handling - just return meaningful errors where necessary.
+● No need for role-based access control - assume all users have the same
+permissions.
+● No need for an admin panel - just API + minimal frontend.
+● No need for a full-fledged ticketing system - we just want to see how you solve
+concurrent purchases.
+● No need to deploy this anywhere - running locally is fine.
+
+Time Limit
+3-4 hours max. If you run out of time, prioritize a working solution for concurrency and event
+creation. Feel free to leave notes on what you'd improve given more time.
+Deliverables
+● A GitHub repo containing your code.
+● A README with setup instructions and a short explanation of how you handled
+concurrency.
+Good luck! 🚀

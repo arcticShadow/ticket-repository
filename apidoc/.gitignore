@@ -1,0 +1,16 @@
+# Bruno environment files
+environments/
+bruno.json
+
+# Bruno local settings
+.bruno/
+
+# Environment variable files
+*.env
+*.env.*
+
+# Log files
+*.log
+
+# Generated docs
+docs/generated/ 
