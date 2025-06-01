@@ -2,7 +2,10 @@
 
 ## Get it up and running.
 
-If you have `skaffold` (or install it with `brew install skaffold`) and you have a kubernetes local environment handy, then running `skaffold dev` will build containers and spin up web-app, api and postgres containers in a 'produciton like' environment.
+If you using [mise](https://mise.jdx.dev/) already - then this repo will auto install all the tools that you might need to run it. if your not using mise, no worries, keep reading.
+
+If you have `skaffold` (or install it with `brew install skaffold`) and you have a kubernetes local (minikube, k3d, docker with k8s enabled etc) environment handy, then running `skaffold dev` will build containers and spin up web-app, api and postgres containers in a 'production like' environment.
+
 
 Otherwise the following commands will work just as well.
 
