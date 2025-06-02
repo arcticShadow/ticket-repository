@@ -64,6 +64,7 @@ export function EventDetail() {
 
     eventSource.onmessage = (event) => {
       const stats = JSON.parse(event.data);
+      console.log('Received statistics(sse):', stats)
       setStatistics(stats);
     };
 
@@ -191,9 +192,9 @@ export function EventDetail() {
           {event.availableTickets <= 0 ? (
             <button disabled>Sold Out</button>
           ) : (
-            <button onClick={handleBuyTicket}>Buy Ticket</button>
-          )}
-          <button onClick={() => navigate('/')}>Back to Events</button>
+            <button onClick={handleBuyTicket}>Get Tickets Now</button> 
+          )}&nbsp;
+          <button onClick={() => navigate('/')}>Return to Events</button>
         </nav>
       </article>
     </main>

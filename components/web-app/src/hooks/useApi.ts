@@ -21,6 +21,20 @@ export const useApi = () => {
       }
       
       return response.json();
+    },
+    delete: async (endpoint: string) => {
+      const response = await fetch(`${API_URL}${endpoint}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      
+      if (!response.ok) {
+        throw new Error('API request failed');
+      }
+      
+      return response.json();
     }
   };
 
